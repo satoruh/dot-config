@@ -1,0 +1,53 @@
+#+TITLE: .zshenv
+#+STARTUP: show5levels
+#+PROPERTY: header-args :tangle .zshenv
+
+* Configuration
+
+** options
+
+#+begin_src zsh
+unsetopt global_rcs
+#+end_src
+
+** Environment variables for XDG Base Directory
+
+https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+#+begin_src zsh
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_CACHE_HOME="${HOME}/.cache"
+#+end_src
+
+** Default path
+
+#+begin_src zsh
+path=(
+    /usr/local/sbin(N-/)
+    /usr/local/bin(N-/)
+    /usr/sbin(N-/)
+    /usr/bin(N-/)
+    /sbin(N-/)
+    /bin(N-/)
+)
+#+end_src
+
+** asdf
+
+#+begin_src zsh
+. $(prefix)/opt/asdf/libexec/asdf.sh
+#+end_src
+
+** path
+
+#+begin_src zsh
+path=(
+    ~/bin(N-/)
+    ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
+    $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
+    $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
+    $path
+)
+#+end_src
