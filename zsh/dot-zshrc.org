@@ -4,19 +4,51 @@
 
 * Configuration
 
+** Misc
+
 #+begin_src zsh
-autoload -Uz compinit; compinit
-autoload -Uz promptinit; promptinit
-autoload -Uz colors; colors
 autoload -Uz is-at-least
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
 autoload -Uz edit-command-line
 #+end_src
 
+
+*** Options
+
 #+begin_src zsh
+unsetopt automenu
+unsetopt autoremoveslash
+setopt incappendhistory
+setopt ignoreeof
+setopt clobber
+setopt equals
+unsetopt flowcontrol
+setopt magicequalsubst
+setopt nomatch
+setopt notify
+setopt printeightbit
+setopt printexitvalue
+setopt shortloops
+#+end_src
+
+** Completion
+
+#+begin_src zsh
+autoload -Uz compinit; compinit
 compinit -d "${XDG_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
+#+end_src
+
+*** Options
+
+#+begin_src zsh
+setopt completealiases
+setopt extendedglob
+setopt listtypes
+setopt listpacked
+setopt autolist
+setopt markdirs
 #+end_src
 
 ** History
@@ -27,44 +59,30 @@ HISTSIZE=100000
 SAVEHIST=100000
 #+end_src
 
-** Options
+*** Options
 
 #+begin_src zsh
-setopt auto_pushd
-setopt auto_list
-unsetopt auto_menu
-unsetopt auto_remove_slash
-setopt pushd_ignore_dups
 setopt append_history
-setopt hist_expire_dups_first
-setopt hist_find_no_dups
-setopt hist_ignore_all_dups
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_no_store
-setopt hist_reduce_blanks
-setopt hist_save_no_dups
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
-setopt ignore_eof
-setopt clobber
-setopt equals
-setopt complete_aliases
-setopt extended_glob
-setopt extended_history
-unsetopt flow_control
-setopt list_packed
-setopt list_types
-setopt magic_equal_subst
-setopt mark_dirs
-setopt nomatch
-setopt notify
-setopt print_eight_bit
-setopt print_exit_value
-setopt prompt_cr
-setopt prompt_subst
-setopt short_loops
+setopt histexpiredupsfirst
+setopt histfindnodups
+setopt histignorealldups
+setopt histignoredups
+setopt histignorespace
+setopt histnostore
+setopt histreduceblanks
+setopt histsavenodups
+setopt histverify
+setopt sharehistory
+setopt extendedhistory
+#+end_src
+
+** Directory
+
+*** Options
+
+#+begin_src zsh
+setopt autopushd
+setopt pushdignoredups
 #+end_src
 
 ** Key bindings
@@ -73,7 +91,20 @@ setopt short_loops
 bindkey -e
 #+end_src
 
-** Aliases
+* Prompt
+
+#+begin_src zsh
+autoload -Uz colors; colors
+autoload -Uz promptinit; promptinit
+#+end_src
+
+** Options
+
+#+begin_src zsh
+unsetopt promptcr
+setopt promptsubst
+#+end_src
+
 
 ** Starship
 

@@ -37,7 +37,7 @@ path=(
 ** asdf
 
 #+begin_src zsh
-. $(prefix)/opt/asdf/libexec/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 #+end_src
 
 ** path
