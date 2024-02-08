@@ -1,1 +1,6 @@
 karabiner/automatic_backups/
+
+zsh/.zshenv
+zsh/.zshrc
+
+tmux/tmux.conf
