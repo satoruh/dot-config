@@ -1,0 +1,6 @@
+[shell]
+program = "/usr/local/bin/zsh"
+args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
+
+[window]
+decorations = "None"
