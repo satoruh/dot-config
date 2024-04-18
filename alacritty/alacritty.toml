@@ -1,5 +1,5 @@
 [shell]
-program = "/usr/local/bin/zsh"
+program = "zsh"
 args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
 
 [window]
