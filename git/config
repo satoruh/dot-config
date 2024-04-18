@@ -1,7 +1,10 @@
-# This is Git's per-user configuration file.
-[user]
-	name = Satoru HOSOTANI
-	email = satoru.hosotani@gmail.com
+# This is Git's per-user configuration
+[include]
+	path = ~/.config/git/config.local
+
+# [user]
+# 	name = Satoru HOSOTANI
+# 	email = satoru.hosotani@gmail.com
 [ghq]
 	root = ~/src/
 [secrets]
@@ -11,3 +14,25 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[push]
+	default = simple
+	autoSetupRemote = true
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[interactive]
+	diffFilter = diff-highlight
+[alias]
+	glog = log --graph --decorate --color --abbrev-commit
+	root = rev-parse --show-toplevel
+[ghq]
+	root = ~/src
+[merge]
+	tool = emerge
+	conflictStyle = diff3
+[pull]
+	ff = only
+[color]
+	status = auto
+	diff = auto

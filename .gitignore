@@ -4,3 +4,5 @@ zsh/.zshenv
 zsh/.zshrc
 
 tmux/tmux.conf
+
+*.local
