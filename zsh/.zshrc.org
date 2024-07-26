@@ -13,7 +13,6 @@ autoload -Uz vcs_info
 autoload -Uz edit-command-line
 #+end_src
 
-
 *** Options
 
 #+begin_src zsh
