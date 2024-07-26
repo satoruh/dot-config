@@ -4,6 +4,14 @@
 
 * Configuration
 
+** local
+
+#+begin_src shell
+  if [[ -f "${ZDOTDIR}/.zshenv.local" ]]; then
+      source "${ZDOTDIR}/.zshenv.local"
+  fi
+#+end_src
+
 ** options
 
 #+begin_src zsh
