@@ -105,6 +105,11 @@ unsetopt promptcr
 setopt promptsubst
 #+end_src
 
+** GPG
+
+#+begin_src zsh
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+#+end_src
 
 ** Starship
 
