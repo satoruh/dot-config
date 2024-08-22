@@ -89,6 +89,13 @@ setopt pushdignoredups
 bindkey -e
 #+end_src
 
+** Aliases
+
+#+begin_src zsh
+alias k=kubectl
+compdef k=kubectl
+#+end_src
+
 * Prompt
 
 #+begin_src zsh
