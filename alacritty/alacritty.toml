@@ -4,3 +4,15 @@ args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
 
 [window]
 decorations = "None"
+
+[font]
+size = 12
+[font.normal]
+family = "HackGen35 Console NF"
+style = "Regular"
+[font.bold]
+family = "HackGen35 Console NF"
+style = "Bold"
+[font.italic]
+family = "HackGen35 Console NF"
+style = "Italic"
