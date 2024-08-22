@@ -2,6 +2,7 @@ karabiner/automatic_backups/
 
 zsh/.zshenv
 zsh/.zshrc
+zsh/.zcompdump
 
 tmux/tmux.conf
 
