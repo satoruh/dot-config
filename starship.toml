@@ -1,2 +1,5 @@
 [kubernetes]
 disabled=false
+contexts = [
+  { context_pattern = ".*live.*", symbol = "🚨 " },
+]
