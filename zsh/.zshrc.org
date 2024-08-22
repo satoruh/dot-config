@@ -42,7 +42,6 @@ zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
 *** Options
 
 #+begin_src zsh
-setopt completealiases
 setopt extendedglob
 setopt listtypes
 setopt listpacked
