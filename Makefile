@@ -1,6 +1,6 @@
 # -*- mode: makefile-gmake -*-
 
-EMACS ?= ~/Applications/Emacs.app/Contents/MacOS/Emacs
+EMACS ?= /Applications/Emacs.app/Contents/MacOS/Emacs
 
 ROOT_DIR := $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
 SRCS := $(shell find $(ROOT_DIR) -type f -name '*.org')
