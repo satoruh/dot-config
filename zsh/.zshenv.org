@@ -60,6 +60,7 @@ path=(
     ~/bin(N-/)
     $(go env GOBIN)(N-/)
     $(go env GOPATH)/bin/(N-/)
+    $(ghcup whereis bindir)(N-/)
     ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
     $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
     $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
