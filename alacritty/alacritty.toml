@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "zsh"
 args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
 
@@ -16,3 +16,5 @@ style = "Bold"
 [font.italic]
 family = "HackGen35 Console NF"
 style = "Italic"
+
+[terminal]
