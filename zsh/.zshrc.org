@@ -116,6 +116,12 @@ setopt promptsubst
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 #+end_src
 
+** Hooks
+
+#+begin_src zsh
+eval "$(asdf exec direnv hook zsh)"
+#+end_src
+
 ** Starship
 
 #+begin_src zsh
