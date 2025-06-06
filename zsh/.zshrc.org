@@ -92,8 +92,10 @@ bindkey -e
 ** Aliases
 
 #+begin_src zsh
-alias k=kubectl
-compdef k=kubectl
+if command -v kubectl >/dev/null; then
+  source <(kubectl completion zsh)
+  alias k=kubectl
+fi
 #+end_src
 
 * Prompt
@@ -119,13 +121,17 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 ** Hooks
 
 #+begin_src zsh
-eval "$(asdf exec direnv hook zsh)"
+if command -v asdf >/dev/null; then
+  eval "$(asdf exec direnv hook zsh)"
+fi
 #+end_src
 
 ** Starship
 
 #+begin_src zsh
-eval "$(starship init zsh)"
+if command -v starship >/dev/null; then
+  eval "$(starship init zsh)"
+fi
 #+end_src
 
 * Integration
