@@ -11,7 +11,7 @@ all: $(TARGETS)
 
 %:: %.org
 	@echo Generating $@ from $<
-	@$(EMACS) -Q --batch --eval "(progn (require 'ob-tangle) (org-babel-tangle-file \"$<\" \"$@\"))"
+	@"$(EMACS)" -Q --batch --eval "(progn (require 'ob-tangle) (org-babel-tangle-file \"$<\" \"$@\"))"
 	@touch $@
 	@chmod ugo-w $@
 
