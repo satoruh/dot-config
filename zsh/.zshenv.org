@@ -47,7 +47,10 @@ path=(
 ** asdf
 
 #+begin_src zsh
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+if command -v brew >/dev/null; then
+  . $(brew --prefix)/opt/asdf/libexec/asdf.sh
+fi
+
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
@@ -56,15 +59,34 @@ export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 ** path
 
 #+begin_src zsh
-path=(
-    ~/bin(N-/)
+if command -v brew >/dev/null; then
+  path=(
+      $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
+      $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
+      $(brew --prefix)/share/git-core/contrib/diff-highlight
+      $path
+  )
+fi
+
+if command -v go >/dev//null; then
+  path=(
     $(go env GOBIN)(N-/)
     $(go env GOPATH)/bin/(N-/)
+    $path
+  )
+fi
+
+if command -v ghcup >/dev/null; then
+  path=(
     $(ghcup whereis bindir)(N-/)
+    $path
+  )
+fi
+
+path=(
+    ~/bin(N-/)
+    /usr/share/doc/git/contrib/diff-highlight/(N-/)
     ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
-    $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
-    $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
-    $(brew --prefix)/share/git-core/contrib/diff-highlight
     $path
 )
 #+end_src
