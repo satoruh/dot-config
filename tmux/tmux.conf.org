@@ -4,6 +4,25 @@
 
 * Configuration
 
+** TPM
+
+#+begin_src conf
+set -g @plugin 'tmux-plugins/tpm'
+#+end_src
+
+*** dracula/tmux
+
+#+begin_src conf
+set -g @plugin 'dracula/tmux'
+set -g @dracula-show-powerline true
+#+end_src
+
+*** Install plugins
+
+#+begin_src conf
+run '~/.tmux/plugins/tpm/tpm'
+#+end_src
+
 ** Prefix key
 
 =C-z= を使う
