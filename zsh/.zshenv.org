@@ -41,6 +41,7 @@ path=(
     /usr/bin(N-/)
     /sbin(N-/)
     /bin(N-/)
+    $path
 )
 #+end_src
 
