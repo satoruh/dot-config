@@ -17,6 +17,12 @@
 [push]
 	default = simple
 	autoSetupRemote = true
+	useForceIfIncludes = true
+[rebase]
+	autosquash = true
+	autostash = true
+[rerere]
+	enabled = true
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
