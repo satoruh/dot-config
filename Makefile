@@ -18,6 +18,11 @@ all: $(TARGETS)
 	@touch $@
 	@chmod ugo-w $@
 
+.PHONY: stow
+stow:
+	@mkdir -p ~/.config
+	@stow -d .. -t ~/.config $(notdir $(CURDIR))
+
 .PHONY: clean
 clean:
 	@rm -f $(TARGETS)
