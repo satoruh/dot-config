@@ -17,12 +17,22 @@
 [push]
 	default = simple
 	autoSetupRemote = true
+	useForceIfIncludes = true
+[rebase]
+	autosquash = true
+	autostash = true
+[rerere]
+	enabled = true
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
 	diff = diff-highlight | less
 [interactive]
 	diffFilter = diff-highlight
+[diff]
+	algorithm = histogram
+[commit]
+	verbose = true
 [alias]
 	glog = log --graph --decorate --color --abbrev-commit
 	root = rev-parse --show-toplevel
@@ -30,13 +40,17 @@
 	root = ~/src
 [merge]
 	tool = emerge
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 	ff = false
 [pull]
 	ff = only
 [color]
 	status = auto
 	diff = auto
+[fetch]
+	prune = true
+[branch]
+	sort = -committerdate
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
