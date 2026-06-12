@@ -8,6 +8,7 @@ setopt printexitvalue
 
 autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
+zstyle ':completion:*' use-cache true
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
 
 setopt extendedglob
