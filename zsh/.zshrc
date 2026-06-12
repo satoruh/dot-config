@@ -17,6 +17,7 @@ setopt markdirs
 HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
+[[ -d "${HISTFILE:h}" ]] || mkdir -p "${HISTFILE:h}"
 
 setopt histexpiredupsfirst
 setopt histfindnodups
