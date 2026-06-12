@@ -37,7 +37,6 @@ if command -v brew >/dev/null; then
   path=(
       $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
       $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
-      $(brew --prefix)/share/git-core/contrib/diff-highlight
       $path
   )
 fi
@@ -59,6 +58,17 @@ fi
 
 path=(
     /usr/share/doc/git/contrib/diff-highlight/(N-/)
+    $path
+)
+
+if command -v brew >/dev/null; then
+  path=(
+      $(brew --prefix)/share/git-core/contrib/diff-highlight
+      $path
+  )
+fi
+
+path=(
     ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
     $path
 )
