@@ -1,21 +1,11 @@
-/*
-!/.gitignore
-!/.stow-local-ignore
-!/Makefile
-!/README.org
+/.claude/
 
-!/alacritty/
-!/asdf/
-!/gh/
 gh/hosts.yml
-!/git/
-!/karabiner/
+
 karabiner/automatic_backups/
-!/nvim/
-!/starship.toml
-!/tmux/
+
 tmux/plugins/
-!/zsh/
+
 zsh/.zcompdump
 
 *.local
