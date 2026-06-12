@@ -12,11 +12,8 @@ karabiner/automatic_backups/
 !/nvim/
 !/starship.toml
 !/tmux/
-tmux/tmux.conf
 tmux/plugins/
 !/zsh/
-zsh/.zshenv
-zsh/.zshrc
 zsh/.zcompdump
 
 *.local
