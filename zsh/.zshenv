@@ -10,6 +10,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
 path=(
+    ~/bin(N-/)
     ~/.local/bin(N-/)
     /opt/homebrew/sbin(N-/)
     /opt/homebrew/bin(N-/)
@@ -23,13 +24,14 @@ path=(
     $path
 )
 
-if command -v brew >/dev/null; then
-  . $(brew --prefix)/opt/asdf/libexec/asdf.sh
-fi
-
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
+path=(
+    ${ASDF_DATA_DIR}/shims(N-/)
+    $path
+)
 
 if command -v brew >/dev/null; then
   path=(
@@ -56,7 +58,6 @@ if command -v ghcup >/dev/null; then
 fi
 
 path=(
-    ~/bin(N-/)
     /usr/share/doc/git/contrib/diff-highlight/(N-/)
     ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
     $path
