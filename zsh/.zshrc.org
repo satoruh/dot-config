@@ -6,13 +6,6 @@
 
 ** Misc
 
-#+begin_src zsh
-autoload -Uz is-at-least
-autoload -Uz add-zsh-hook
-autoload -Uz vcs_info
-autoload -Uz edit-command-line
-#+end_src
-
 *** Options
 
 #+begin_src zsh
@@ -98,33 +91,21 @@ if command -v kubectl >/dev/null; then
 fi
 #+end_src
 
-* Prompt
-
-#+begin_src zsh
-autoload -Uz colors; colors
-autoload -Uz promptinit; promptinit
-#+end_src
-
-** Options
-
-#+begin_src zsh
-unsetopt promptcr
-setopt promptsubst
-#+end_src
-
 ** GPG
 
 #+begin_src zsh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 #+end_src
 
-** Hooks
+** direnv
 
 #+begin_src zsh
-if command -v asdf >/dev/null; then
-  eval "$(asdf exec direnv hook zsh)"
+if command -v direnv >/dev/null; then
+  eval "$(direnv hook zsh)"
 fi
 #+end_src
+
+* Prompt
 
 ** Starship
 

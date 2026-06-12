@@ -1,8 +1,3 @@
-autoload -Uz is-at-least
-autoload -Uz add-zsh-hook
-autoload -Uz vcs_info
-autoload -Uz edit-command-line
-
 unsetopt automenu
 unsetopt autoremoveslash
 setopt incappendhistory
@@ -54,16 +49,10 @@ if command -v kubectl >/dev/null; then
   alias k=kubectl
 fi
 
-autoload -Uz colors; colors
-autoload -Uz promptinit; promptinit
-
-unsetopt promptcr
-setopt promptsubst
-
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
-if command -v asdf >/dev/null; then
-  eval "$(asdf exec direnv hook zsh)"
+if command -v direnv >/dev/null; then
+  eval "$(direnv hook zsh)"
 fi
 
 if command -v starship >/dev/null; then
