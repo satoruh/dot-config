@@ -33,8 +33,10 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 #+begin_src zsh
 path=(
+    ~/.local/bin(N-/)
     /opt/homebrew/sbin(N-/)
     /opt/homebrew/bin(N-/)
+    /snap/bin(N-/)
     /usr/local/sbin(N-/)
     /usr/local/bin(N-/)
     /usr/sbin(N-/)
