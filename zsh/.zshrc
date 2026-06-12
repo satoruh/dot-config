@@ -1,36 +1,26 @@
 unsetopt automenu
 unsetopt autoremoveslash
-setopt incappendhistory
 setopt ignoreeof
-setopt clobber
-setopt equals
 unsetopt flowcontrol
 setopt magicequalsubst
-setopt nomatch
-setopt notify
 setopt printeightbit
 setopt printexitvalue
-setopt shortloops
 
 autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME}/zcompdump-${ZSH_VERSION}"
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/zcompcache"
 
 setopt extendedglob
-setopt listtypes
 setopt listpacked
-setopt autolist
 setopt markdirs
 
 HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
 
-setopt append_history
 setopt histexpiredupsfirst
 setopt histfindnodups
 setopt histignorealldups
-setopt histignoredups
 setopt histignorespace
 setopt histnostore
 setopt histreduceblanks
