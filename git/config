@@ -47,6 +47,10 @@
 [color]
 	status = auto
 	diff = auto
+[fetch]
+	prune = true
+[branch]
+	sort = -committerdate
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
