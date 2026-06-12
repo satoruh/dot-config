@@ -1,12 +1,22 @@
-karabiner/automatic_backups/
+/*
+!/.gitignore
+!/Makefile
 
+!/alacritty/
+!/asdf/
+!/gh/
 gh/hosts.yml
-
+!/git/
+!/karabiner/
+karabiner/automatic_backups/
+!/nvim/
+!/starship.toml
+!/tmux/
+tmux/tmux.conf
+tmux/plugins/
+!/zsh/
 zsh/.zshenv
 zsh/.zshrc
 zsh/.zcompdump
-
-tmux/tmux.conf
-tmux/plugins/
 
 *.local
