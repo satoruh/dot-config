@@ -29,6 +29,10 @@
 	diff = diff-highlight | less
 [interactive]
 	diffFilter = diff-highlight
+[diff]
+	algorithm = histogram
+[commit]
+	verbose = true
 [alias]
 	glog = log --graph --decorate --color --abbrev-commit
 	root = rev-parse --show-toplevel
