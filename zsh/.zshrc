@@ -39,7 +39,9 @@ if command -v kubectl >/dev/null; then
   alias k=kubectl
 fi
 
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+if command -v gpgconf >/dev/null; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
 
 if command -v direnv >/dev/null; then
   eval "$(direnv hook zsh)"

@@ -84,7 +84,9 @@ fi
 ** ssh
 
 #+begin_src zsh
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+if command -v gpgconf >/dev/null; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
 #+end_src
 
 ** direnv
