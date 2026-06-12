@@ -6,6 +6,4 @@ karabiner/automatic_backups/
 
 tmux/plugins/
 
-zsh/.zcompdump
-
 *.local
