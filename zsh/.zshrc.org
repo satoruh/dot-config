@@ -91,7 +91,7 @@ if command -v kubectl >/dev/null; then
 fi
 #+end_src
 
-** GPG
+** ssh
 
 #+begin_src zsh
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
