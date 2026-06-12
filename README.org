@@ -1,0 +1,38 @@
+#+TITLE: dot-config
+
+XDG Base Directory (=~/.config=) に置く設定を GNU Stow で管理する。
+
+* 必要なもの
+
+- git
+- GNU Stow
+- GNU Emacs(設定を編集する場合のみ。タングル生成物はコミット済み)
+
+* セットアップ
+
+#+begin_src shell
+  git clone https://github.com/satoruh/dot-config.git ~/src/github.com/satoruh/dot-config
+  cd ~/src/github.com/satoruh/dot-config
+  make stow
+#+end_src
+
+=~/.config= 配下に同名の実体ファイルが既にある場合、stow は衝突エラーになるので退避してから実行する。
+
+* zsh
+
+=ZDOTDIR= をシステム側で設定する。
+
+#+begin_src shell
+  # /etc/zsh/zshenv
+  export ZDOTDIR="${HOME}/.config/zsh"
+#+end_src
+
+* 編集
+
+zsh と tmux の設定は org ファイルからタングルして生成する。Emacs で編集すれば保存時に自動でタングルされる(dot-emacs 側の =my/org-babel-auto-tangle=)。Emacs の外で編集した場合:
+
+#+begin_src shell
+  make
+#+end_src
+
+生成物(=zsh/.zshenv= など)もコミットする。生成物は read-only なので、直接編集せず org ファイルを編集する。

@@ -3,3 +3,4 @@
 ^/\.gitignore
 ^/\.stow-local-ignore
 ^/Makefile
+^/README\.org

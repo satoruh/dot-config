@@ -6,7 +6,7 @@ endif
 EMACS ?= emacs
 
 ROOT_DIR := $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
-SRCS := $(shell find $(ROOT_DIR) -type f -name '*.org')
+SRCS := $(shell find $(ROOT_DIR) -type f -name '*.org' -not -name 'README.org')
 TARGETS := $(SRCS:.org=)
 
 .PHONY: all
