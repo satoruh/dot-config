@@ -32,6 +32,8 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 ** Default path
 
 #+begin_src zsh
+typeset -gU path
+
 path=(
     ~/bin(N-/)
     ~/.local/bin(N-/)
