@@ -1,5 +1,7 @@
 karabiner/automatic_backups/
 
+gh/hosts.yml
+
 zsh/.zshenv
 zsh/.zshrc
 zsh/.zcompdump
