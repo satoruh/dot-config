@@ -22,6 +22,11 @@ all: $(TARGETS)
 stow:
 	@mkdir -p ~/.config
 	@stow -d .. -t ~/.config $(notdir $(CURDIR))
+	@$(MAKE) fc-cache
+
+.PHONY: fc-cache
+fc-cache:
+	@command -v fc-cache >/dev/null 2>&1 && fc-cache -f || true
 
 .PHONY: clean
 clean:
