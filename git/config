@@ -6,7 +6,7 @@
 # 	name = Satoru HOSOTANI
 # 	email = satoru.hosotani@gmail.com
 [ghq]
-	root = ~/src/
+	root = ~/src
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
@@ -36,8 +36,6 @@
 [alias]
 	glog = log --graph --decorate --color --abbrev-commit
 	root = rev-parse --show-toplevel
-[ghq]
-	root = ~/src
 [merge]
 	tool = emerge
 	conflictStyle = zdiff3
