@@ -3,4 +3,5 @@
 ^/\.gitignore
 ^/\.stow-local-ignore
 ^/Makefile
-^/README\.org
+# タングル元の org ソースは ~/.config へリンクせず、生成物のみを配置する
+\.org$
