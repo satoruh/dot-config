@@ -16,6 +16,8 @@ XDG Base Directory (=~/.config=) に置く設定を GNU Stow で管理する。
   make stow
 #+end_src
 
+clone 先のパスは ghq(=root= = =~/src=)の慣例に合わせた例で、必須ではない。=make stow= は親ディレクトリを stow のソースとして =~/.config= にリンクを張る(=stow -d ..=)ため、任意の場所に clone しても動作する。
+
 =~/.config= 配下に同名の実体ファイルが既にある場合、stow は衝突エラーになるので退避してから実行する。
 
 * zsh
