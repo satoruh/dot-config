@@ -91,6 +91,14 @@ if command -v gpgconf >/dev/null; then
 fi
 #+end_src
 
+** mise
+
+#+begin_src zsh
+if command -v mise >/dev/null; then
+  eval "$(mise activate zsh)"
+fi
+#+end_src
+
 ** direnv
 
 #+begin_src zsh
