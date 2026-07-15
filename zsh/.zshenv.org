@@ -50,15 +50,17 @@ path=(
 )
 #+end_src
 
-** asdf
+** mise
+
+mise はデフォルトで XDG に従う(data = =${XDG_DATA_HOME}/mise=、config =
+=${XDG_CONFIG_HOME}/mise=)ため、環境変数の明示は不要。
+
+非対話シェルからも参照できるよう shims を PATH に加える。対話シェルでの
+=mise activate= は =.zshrc= 側で行う。
 
 #+begin_src zsh
-export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
-export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-
 path=(
-    ${ASDF_DATA_DIR}/shims(N-/)
+    ${XDG_DATA_HOME}/mise/shims(N-/)
     $path
 )
 #+end_src

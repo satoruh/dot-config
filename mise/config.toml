@@ -1,0 +1,5 @@
+[settings]
+# asdf の legacy_version_file = yes 相当。
+# .nvmrc / .ruby-version / go.mod など、ツール固有のバージョンファイルを読み取る。
+# (旧 ASDF_GOLANG_MOD_VERSION_ENABLED=true による go.mod 読み取りもこれで代替する)
+legacy_version_file = true

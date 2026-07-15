@@ -26,12 +26,8 @@ path=(
     $path
 )
 
-export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
-export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-
 path=(
-    ${ASDF_DATA_DIR}/shims(N-/)
+    ${XDG_DATA_HOME}/mise/shims(N-/)
     $path
 )
 
