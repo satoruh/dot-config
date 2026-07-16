@@ -33,6 +33,7 @@ path=(
 
 if command -v brew >/dev/null; then
   path=(
+      $(brew --prefix)/opt/coreutils/libexec/gnubin(N-/)
       $(brew --prefix)/opt/grep/libexec/gnubin(N-/)
       $(brew --prefix)/opt/gnu-sed/libexec/gnubin(N-/)
       $path
