@@ -70,3 +70,8 @@ path=(
     ~/Applications/Emacs.app/Contents/MacOS/bin(N-/)
     $path
 )
+
+path=(
+    /mnt/wsl/docker-desktop/cli-tools/usr/bin(N-/)
+    $path
+)
