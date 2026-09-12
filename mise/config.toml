@@ -3,3 +3,7 @@
 # .nvmrc / .ruby-version / go.mod など、ツール固有のバージョンファイルを読み取る。
 # (旧 ASDF_GOLANG_MOD_VERSION_ENABLED=true による go.mod 読み取りもこれで代替する)
 legacy_version_file = true
+go_set_gobin = false
+
+[tools]
+go = "latest"
