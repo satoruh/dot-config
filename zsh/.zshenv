@@ -55,6 +55,11 @@ if command -v ghcup >/dev/null; then
   )
 fi
 
+path=(
+    ${XDG_CONFIG_HOME}/git/bin(N-/)
+    $path
+)
+
 if command -v brew >/dev/null; then
   path=(
       $(brew --prefix)/share/git-core/contrib/diff-highlight(N-/)

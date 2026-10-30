@@ -104,6 +104,11 @@ fi
 ** git (diff-highlight)
 
 #+begin_src zsh
+path=(
+    ${XDG_CONFIG_HOME}/git/bin(N-/)
+    $path
+)
+
 if command -v brew >/dev/null; then
   path=(
       $(brew --prefix)/share/git-core/contrib/diff-highlight(N-/)
