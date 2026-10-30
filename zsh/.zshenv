@@ -55,11 +55,6 @@ if command -v ghcup >/dev/null; then
   )
 fi
 
-path=(
-    /usr/share/doc/git/contrib/diff-highlight(N-/)
-    $path
-)
-
 if command -v brew >/dev/null; then
   path=(
       $(brew --prefix)/share/git-core/contrib/diff-highlight(N-/)
